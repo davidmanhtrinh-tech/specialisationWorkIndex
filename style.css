@@ -372,7 +372,7 @@ aside {
 }
 
 
-/* FOOTER */
+/* footer section reduced down */
 
 footer {
     width: 100%;
@@ -556,6 +556,12 @@ footer {
     margin-bottom: 5rem;
 }
 
+footer p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
 
 /* It took me 3 hours to try and figure it out, but I got different source and AI to assist me in positioning the images so that they land beside their corresponding descriptions. */
 
@@ -591,8 +597,6 @@ footer {
 }
 
 
-/* TEXT MAINTAINS ORIGINAL WIDTH */
-
 .analysisText {
     width: 100%;
     min-width: 0;
@@ -607,3 +611,4 @@ footer {
 .analysisText p + p {
     margin-top: 1.25rem;
 }
+
