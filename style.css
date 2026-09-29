@@ -1335,9 +1335,25 @@ footer p {
 }
 
 
-/* gives the commit subject enough room for legability */
+/* gives the commit subject enough room for legiability */
 .commitTableContainer td:nth-child(3) {
     min-width: 280px;
 }
 
 
+/* makes the Git history work better on smaller screens */
+@media (width < 600px) {
+
+    .commitHistory summary {
+        padding: 0.9rem 1rem;
+    }
+
+    .commitTableContainer {
+        padding: 0.75rem;
+    }
+
+    .commitTableContainer table {
+        min-width: 750px;
+    }
+
+}
