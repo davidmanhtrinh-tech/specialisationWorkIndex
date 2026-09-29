@@ -612,3 +612,732 @@ footer p {
     margin-top: 1.25rem;
 }
 
+/* !!!!! */
+/* add in your own font imports here */
+/* remember to update them in the rest of the CSS : eg the body selector */
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
+
+/* !!!!! */
+/* change out, and/or add colours to the colour scheme */
+
+:root {
+    --colour-1: #171717;
+    --colour-2: #f4f1ea;
+
+    --colour-muted: #6b6963;
+    --colour-border: #cbc7bd;
+    --colour-accent: #d44732;
+    --colour-panel: #ebe7de;
+
+    --page-width: 1480px;
+    --reading-width: 74ch;
+}
+
+
+/* this swaps the colour order to account for user's OS dark mode */
+/* !!!!! */
+/* remember to update the colours here too to reflect the above changes */
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --colour-1: #f1f0eb;
+        --colour-2: #171717;
+
+        --colour-muted: #aaa79f;
+        --colour-border: #454545;
+        --colour-accent: #ef6b55;
+        --colour-panel: #222222;
+    }
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background-color: var(--colour-2);
+    color: var(--colour-1);
+
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+}
+
+
+
+/* Header section */
+header {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    padding: 3rem 2rem 4rem;
+
+    border-bottom: 1px solid var(--colour-border);
+}
+
+
+.headerInner {
+    width: 100%;
+    max-width: var(--page-width);
+}
+
+
+.eyebrow {
+    margin: 0 0 1.25rem;
+
+    color: var(--colour-accent);
+
+    font-size: 0.75rem;
+    font-weight: 600;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+header h1 {
+    margin: 0;
+
+    max-width: 950px;
+
+    font-size: clamp(3rem, 7vw, 7rem);
+    font-weight: 500;
+
+    line-height: 0.95;
+    letter-spacing: -0.055em;
+}
+
+
+.headerSubtitle {
+    margin-top: 1.75rem;
+
+    max-width: 600px;
+
+    color: var(--colour-muted);
+
+    font-size: 1.1rem;
+}
+
+
+
+/* page structured layout */
+
+
+.mainNavContainer {
+    width: 100%;
+    max-width: var(--page-width);
+
+    margin-inline: auto;
+
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr) 180px;
+    gap: 4rem;
+
+    padding: 4rem 2rem 6rem;
+}
+
+
+/* Navigation configuration */
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 0.25rem;
+
+    min-width: 0;
+}
+
+
+.navLabel {
+    margin: 0 0 1rem;
+
+    color: var(--colour-muted);
+
+    font-size: 0.7rem;
+    font-weight: 600;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+
+nav a {
+    width: 100%;
+
+    padding: 0.7rem 0;
+
+    border-bottom: 1px solid var(--colour-border);
+
+    color: var(--colour-muted);
+
+    font-size: 0.9rem;
+    text-decoration: none;
+
+    transition:
+        color 180ms ease,
+        padding-left 180ms ease;
+}
+
+
+nav a:hover {
+    color: var(--colour-1);
+    padding-left: 0.4rem;
+}
+
+
+nav .activeNav {
+    color: var(--colour-1);
+    font-weight: 500;
+}
+
+
+main {
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+
+section {
+    width: 100%;
+    max-width: var(--reading-width);
+
+    padding-block: 4rem;
+
+    border-top: 1px solid var(--colour-border);
+}
+
+
+section:first-child {
+    padding-top: 0;
+    border-top: none;
+}
+
+
+.sectionNumber {
+    margin: 0 0 1rem;
+
+    color: var(--colour-accent);
+
+    font-size: 0.75rem;
+    font-weight: 600;
+
+    letter-spacing: 0.1em;
+}
+
+
+.firstSectionHeading {
+    margin-top: 0;
+}
+
+
+
+/* Typography - I wanted a clean and professional look and so I searched up conventional typeface measurements */
+h2 {
+    margin: 0 0 2.5rem;
+
+    max-width: 900px;
+
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 500;
+
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+}
+
+
+h3 {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+
+    font-size: 1.35rem;
+    font-weight: 600;
+
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+}
+
+
+h4 {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+
+p {
+    max-width: var(--reading-width);
+}
+
+
+b,
+strong {
+    font-weight: 600;
+}
+
+
+main a,
+footer a {
+    color: inherit;
+
+    text-decoration-color: var(--colour-accent);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+}
+
+
+main a:hover,
+footer a:hover {
+    color: var(--colour-accent);
+}
+
+
+/* Info section */
+
+.briefBlock {
+    margin-block: 2.5rem 3.5rem;
+
+    padding: 1.5rem 1.75rem;
+
+    border-left: 3px solid var(--colour-accent);
+
+    background-color: var(--colour-panel);
+}
+
+
+.briefBlock h4:first-child {
+    margin-top: 0;
+}
+
+
+.briefBlock p {
+    color: var(--colour-1);
+}
+
+
+/* Interaction Analysis */
+
+.analysisEntry {
+    margin-top: 4rem;
+    padding-top: 2rem;
+
+    border-top: 1px solid var(--colour-border);
+}
+
+
+.analysisHeading {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+
+    margin-bottom: 1.5rem;
+}
+
+
+.analysisHeading h3 {
+    margin: 0;
+
+    font-size: clamp(1.5rem, 3vw, 2.3rem);
+    font-weight: 500;
+
+    letter-spacing: -0.03em;
+}
+
+
+.analysisIndex {
+    color: var(--colour-accent);
+
+    font-size: 0.75rem;
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+}
+
+
+.placeholderText {
+    color: var(--colour-muted);
+    font-style: italic;
+}
+
+
+aside {
+    visibility: hidden;
+}
+
+
+/* footer section reduced down */
+
+footer {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    margin-top: auto;
+
+    padding: 2.5rem 2rem;
+
+    border-top: 1px solid var(--colour-border);
+}
+
+
+.footerInner {
+    width: 100%;
+    max-width: var(--page-width);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 2rem;
+
+    color: var(--colour-muted);
+
+    font-size: 0.8rem;
+}
+
+
+.footerLabel {
+    color: var(--colour-1);
+    font-weight: 500;
+}
+
+
+/* technique from Kevin Powell */
+/* https://youtu.be/CU8Plk-53RU?si=zMpP0Pfbg1SaXeDB&t=255 */
+
+/* longer post about how this works and the * + * selector */
+/* https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/ */
+
+.prose > * + * {
+    margin-block-start: var(--prose-flow, 1em);
+}
+
+/* breakpoints from Material Design Spec */
+/* https://m3.material.io/foundations/layout/breakpoints/overview */
+
+
+/* extra-large breakpoint : desktop, ultrawide monitors */
+
+@media (width > 1600px) {
+
+    .mainNavContainer {
+        gap: 6rem;
+    }
+
+}
+
+
+/* expanded breakpoint : phone or tablet in landscape, desktop */
+
+@media (width < 1200px) {
+
+    header {
+        padding-block: 2.5rem 3rem;
+    }
+
+    .mainNavContainer {
+        grid-template-columns: 150px minmax(0, 1fr);
+        gap: 3rem;
+    }
+
+    aside {
+        display: none;
+    }
+
+}
+
+
+/* medium breakpoint : tablet in portrait */
+
+@media (width < 840px) {
+
+    header {
+        padding: 2rem 1.5rem 2.5rem;
+    }
+
+    .mainNavContainer {
+        display: flex;
+        flex-direction: column;
+
+        padding: 2rem 1.5rem 4rem;
+        gap: 3rem;
+    }
+
+    nav {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        border-top: 1px solid var(--colour-border);
+    }
+
+    .navLabel {
+        grid-column: 1 / -1;
+
+        margin-top: 1rem;
+    }
+
+    nav a {
+        width: auto;
+    }
+
+    nav a:nth-of-type(2) {
+        text-align: right;
+    }
+
+    main {
+        flex: 1;
+    }
+
+    section {
+        max-width: none;
+        padding-block: 3rem;
+    }
+
+    footer {
+        padding: 2rem 1.5rem;
+    }
+
+}
+
+
+/* compact breakpoint : phone in portrait */
+
+@media (width < 600px) {
+
+    header h1 {
+        font-size: 2.75rem;
+    }
+
+    .headerSubtitle {
+        font-size: 1rem;
+    }
+
+    .mainNavContainer {
+        padding-inline: 1rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .briefBlock {
+        padding: 1.25rem;
+    }
+
+    .analysisHeading {
+        flex-direction: column;
+        gap: 0.35rem;
+    }
+
+    .footerInner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+}
+
+.analysisContent {
+    position: relative;
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+footer p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+/* It took me 3 hours to try and figure it out, but I got different source and AI to assist me in positioning the images so that they land beside their corresponding descriptions. */
+
+.analysisFigure {
+    position: absolute;
+
+    width: 320px;
+
+    right: calc(100% + 3rem);
+    top: 0;
+
+    margin: 0;
+}
+
+
+.analysisFigure img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    border: 1px solid var(--colour-border);
+}
+
+
+.analysisFigure figcaption {
+    margin-top: 0.6rem;
+
+    color: var(--colour-muted);
+
+    font-size: 0.75rem;
+    line-height: 1.4;
+}
+
+
+.analysisText {
+    width: 100%;
+    min-width: 0;
+}
+
+
+.analysisText p:first-child {
+    margin-top: 0;
+}
+
+
+.analysisText p + p {
+    margin-top: 1.25rem;
+}
+
+
+/* Git commit history section */
+
+/* this creates a stylalised frame around the commit history */
+.commitHistory {
+    width: 100%;
+
+    margin-top: 1.5rem;
+
+    border: 1px solid var(--colour-border);
+
+    background-color: var(--colour-panel);
+}
+
+
+/* this makes the dropdown heading look like a button rather than a flat desig */
+.commitHistory summary {
+    padding: 1rem 1.25rem;
+
+    cursor: pointer;
+
+    color: var(--colour-1);
+    background-color: var(--colour-panel);
+
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    letter-spacing: 0.04em;
+
+    transition:
+        background-color 180ms ease,
+        color 180ms ease;
+}
+
+
+/* changes the button colour when hovering over it */
+.commitHistory summary:hover {
+    background-color: #d97732;
+    color: var(--colour-2);
+}
+
+
+/* keeps the button highlighted when the table is open */
+.commitHistory[open] summary {
+    border-bottom: 1px solid var(--colour-border);
+}
+
+
+/* gives the table some space inside the frame */
+.commitTableContainer {
+    width: 100%;
+
+    padding: 1rem;
+
+    overflow-x: auto;
+}
+
+
+/* I decided to style the actual git commit table */
+.commitTableContainer table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background-color: var(--colour-2);
+
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+
+/* creates the table grid */
+.commitTableContainer th,
+.commitTableContainer td {
+    padding: 0.8rem 1rem;
+
+    border: 1px solid var(--colour-border);
+
+    text-align: left;
+    vertical-align: top;
+}
+
+
+/* makes the table headings easier to separate */
+.commitTableContainer th {
+    background-color: var(--colour-panel);
+
+    font-weight: 600;
+}
+
+
+/* subtle hover effect the slight transparencywhen looking through commits */
+.commitTableContainer tbody tr {
+    transition: background-color 150ms ease;
+}
+
+
+.commitTableContainer tbody tr:hover {
+    background-color: var(--colour-panel);
+}
+
+
+
+.commitTableContainer td:nth-child(2) {
+    min-width: 220px;
+}
+
+
+/* gives the commit subject enough room for legability */
+.commitTableContainer td:nth-child(3) {
+    min-width: 280px;
+}
+
+

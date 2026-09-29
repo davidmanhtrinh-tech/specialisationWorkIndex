@@ -21,12 +21,13 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <header>
 <!-- !!!!! -->
 <!--    change this to your preferred online name  -->
-        <h1>Interface Design Exploration
+        <h1>Interface Design Exploration</h1>
     </header>
 
     <div class="mainNavContainer">
@@ -36,59 +37,321 @@
             <a href="assignment1.html">Assignment 1</a>
         </nav>
 
-   <main>
+        <main>
 
             <section id="scenario-section">
 
                 <h3 class="firstSectionHeading">David Trinh | s4089410 </h3>
 
-                
-<h4>Extended Technique 1: Spatial Input</h4>
 
-<p>
-My first extended technique explores spatial input and how the position of the Monstars can become part of the musical interaction. Rather than only using dragging as a way of rearranging characters on the screen, I wanted their position to actually affect the sound. This felt appropriate for Monstars because the project is designed for young children with minimal language skills, allowing movement and spatial relationships to communicate how the instrument works without relying heavily on written instructions or traditional music controls.
-</p>
+                <h4>Extended Technique 1: Spatial Input</h4>
 
-<p>
-I explored this through three parallel prototypes. P1A used continuous parameter mapping, where moving a Monstar horizontally changed its playback speed and moving it vertically changed its volume. P1B explored activation zones by dividing the space into Slow, Normal and Fast areas. Instead of continuously changing the sound, placing a Monstar inside one of these areas changed it to a specific playback speed. P1C explored spatial relationships between the characters themselves, where bringing Monstars closer together made their sounds louder and moving them further apart made them quieter.
-</p>
+                <p>
+                    My first extended technique explores spatial input and how the position of the Monstars can become part of the musical interaction. Rather than only using dragging as a way of rearranging characters on the screen, I wanted their position to actually affect the sound. This felt appropriate for Monstars because the project is designed for young children with minimal language skills, allowing movement and spatial relationships to communicate how the instrument works without relying heavily on written instructions or traditional music controls.
+                </p>
 
-<p>
-Creating these prototypes helped me understand that spatial input can be used for more than simply positioning interface elements. The same dragging interaction could produce very different musical behaviours depending on how the space was interpreted. P1A treated the whole stage as a continuous controller, P1B gave particular areas of the stage specific functions, while P1C made the relationship between the Monstars themselves the interaction. This allowed me to compare different ways that physical movement could become understandable musical control within Monstars.
-</p>
+                <p>
+                    I explored this through three parallel prototypes. P1A used continuous parameter mapping, where moving a Monstar horizontally changed its playback speed and moving it vertically changed its volume. P1B explored activation zones by dividing the space into Slow, Normal and Fast areas. Instead of continuously changing the sound, placing a Monstar inside one of these areas changed it to a specific playback speed. P1C explored spatial relationships between the characters themselves, where bringing Monstars closer together made their sounds louder and moving them further apart made them quieter.
+                </p>
+
+                <p>
+                    Creating these prototypes helped me understand that spatial input can be used for more than simply positioning interface elements. The same dragging interaction could produce very different musical behaviours depending on how the space was interpreted. P1A treated the whole stage as a continuous controller, P1B gave particular areas of the stage specific functions, while P1C made the relationship between the Monstars themselves the interaction. This allowed me to compare different ways that physical movement could become understandable musical control within Monstars.
+                </p>
 
 
-<h4>Extended Technique 2: Looping and Synchronisation</h4>
+                <h4>Extended Technique 2: Looping and Synchronisation</h4>
 
-<p>
-My second area of exploration focuses on looping and synchronisation between the Monstars. Because each character represents a different musical part, including vocals, drums, guitar, piano and strings, I wanted to explore what happens when several independently controlled performers are combined into one repeating musical composition. An important part of this was not only whether the sounds could loop, but how the timing of each character affected whether they felt like individual sounds playing at the same time or a group performing together.
-</p>
+                <p>
+                    My second area of exploration focuses on looping and synchronisation between the Monstars. Because each character represents a different musical part, including vocals, drums, guitar, piano and strings, I wanted to explore what happens when several independently controlled performers are combined into one repeating musical composition. An important part of this was not only whether the sounds could loop, but how the timing of each character affected whether they felt like individual sounds playing at the same time or a group performing together.
+                </p>
 
-<p>
-I explored this through another three parallel prototypes. P2A tested independent timed loops, where each Monstar began its sound and animation immediately when activated and followed its own timing. P2B introduced loop-aligned entry. The first Monstar established the timing of the performance, while Monstars activated afterwards waited until the next shared four-beat bar before beginning. P2C explored a shared rhythm system where active Monstars used one master musical clock. Each character could follow a different beat pattern, but their rhythmic animation was controlled by the same timing source.
-</p>
+                <p>
+                    I explored this through another three parallel prototypes. P2A tested independent timed loops, where each Monstar began its sound and animation immediately when activated and followed its own timing. P2B introduced loop-aligned entry. The first Monstar established the timing of the performance, while Monstars activated afterwards waited until the next shared four-beat bar before beginning. P2C explored a shared rhythm system where active Monstars used one master musical clock. Each character could follow a different beat pattern, but their rhythmic animation was controlled by the same timing source.
+                </p>
 
-<p>
-Comparing these approaches helped me explore different levels of synchronisation rather than immediately deciding that everything should follow one timing system. P2A allowed the performers to behave independently, P2B controlled when new performers entered the composition, and P2C connected the performers through a shared rhythm. This also exposed limitations in using JavaScript timers and independently playing audio files, where small timing differences can become noticeable when several repeating elements are combined.
-</p>
+                <p>
+                    Comparing these approaches helped me explore different levels of synchronisation rather than immediately deciding that everything should follow one timing system. P2A allowed the performers to behave independently, P2B controlled when new performers entered the composition, and P2C connected the performers through a shared rhythm. This also exposed limitations in using JavaScript timers and independently playing audio files, where small timing differences can become noticeable when several repeating elements are combined.
+                </p>
 
-<p>
-A significant takeaway from these two areas was understanding the value of parallel prototyping rather than treating each prototype as an improved version of the previous one. Spatial input allowed me to test different interpretations of movement and position, while looping and synchronisation allowed me to test different relationships between independent performers and shared musical timing. Instead of committing to one interaction early, these prototypes gave me different behaviours that I can now compare through testing and use to inform the future development of Monstars.
-</p>
-             
+                <p>
+                    A significant takeaway from these two areas was understanding the value of parallel prototyping rather than treating each prototype as an improved version of the previous one. Spatial input allowed me to test different interpretations of movement and position, while looping and synchronisation allowed me to test different relationships between independent performers and shared musical timing. Instead of committing to one interaction early, these prototypes gave me different behaviours that I can now compare through testing and use to inform the future development of Monstars.
+                </p>
+
+
+                <h4>Git Commit History</h4>
+
+                <p>
+                    The following table documents the development history of the Monstars audio instrument and its parallel prototypes.
+                </p>
+
+                <details class="commitHistory">
+
+                    <summary>View Git Commit History</summary>
+
+                    <div class="commitTableContainer">
+
+                        <table>
+
+                            <thead>
+                                <tr>
+                                    <th>Author</th>
+                                    <th>Date</th>
+                                    <th>Subject</th>
+                                    <th>Body</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td>davidmanhtrinh-tech</td>
+                                    <td>Wed Aug 12 14:49:47 2026 +1000</td>
+                                    <td>added modal</td>
+                                    <td>undefined</td>
+                                </tr>
+
+                                <tr>
+                                    <td>davidmanhtrinh-tech</td>
+                                    <td>Wed Aug 12 14:56:37 2026 +1000</td>
+                                    <td>added our audio Init</td>
+                                    <td>undefined</td>
+                                </tr>
+
+                                <tr>
+                                    <td>davidmanhtrinh-tech</td>
+                                    <td>Wed Aug 12 14:59:20 2026 +1000</td>
+                                    <td>Id was spaced apart</td>
+                                    <td>undefined</td>
+                                </tr>
+
+                                <tr>
+                                    <td>davidmanhtrinh-tech</td>
+                                    <td>Wed Aug 12 15:55:32 2026 +1000</td>
+                                    <td>added design system in css</td>
+                                    <td>undefined</td>
+                                </tr>
+
+                                <tr>
+                                    <td>davidmanhtrinh-tech</td>
+                                    <td>Wed Aug 12 16:10:35 2026 +1000</td>
+                                    <td>playing around</td>
+                                    <td>undefined</td>
+                                </tr>
+
+                                <tr>
+                                    <td>davidmanhtrinh-tech</td>
+                                    <td>Wed Aug 12 16:12:44 2026 +1000</td>
+                                    <td>CSS designing</td>
+                                    <td>undefined</td>
+                                </tr>
+
+                                <tr>
+                                    <td>davidmanhtrinh-tech</td>
+                                    <td>Wed Aug 19 15:59:15 2026 +1000</td>
+                                    <td>added in css and js - inputted js edge</td>
+                                    <td>undefined</td>
+                                </tr>
+
+                                <tr>
+                                    <td>davidmanhtrinh-tech</td>
+                                    <td>Wed Aug 19 16:23:34 2026 +1000</td>
+                                    <td>added in an SVG graphic of a personally designed characted and began implementing dragging inputs</td>
+                                    <td>undefined</td>
+                                </tr>
+
+                                <tr>
+                                    <td>davidmanhtrinh-tech</td>
+                                    <td>Wed Aug 26 14:10:40 2026 +1000</td>
+                                    <td>added audio and play/pause</td>
+                                    <td>undefined</td>
+                                </tr>
+
+                                <tr>
+                                    <td>davidmanhtrinh-tech</td>
+                                    <td>Wed Aug 26 16:30:43 2026 +1000</td>
+                                    <td>monstars</td>
+                                    <td>undefined</td>
+                                </tr>
+
+                                <tr>
+                                    <td>davidmanhtrinh-tech</td>
+                                    <td>Wed Aug 26 18:43:38 2026 +1000</td>
+                                    <td>dragging function troubleshoot</td>
+                                    <td>undefined</td>
+                                </tr>
+
+                                <tr>
+                                    <td>davidmanhtrinh-tech</td>
+                                    <td>Wed Sep 9 15:58:41 2026 +1000</td>
+                                    <td>monstar</td>
+                                    <td>undefined</td>
+                                </tr>
+
+                                <tr>
+                                    <td>davidmanhtrinh-tech</td>
+                                    <td>Tue Sep 22 17:40:57 2026 +1000</td>
+                                    <td>Adding in samples</td>
+                                    <td>undefined</td>
+                                </tr>
+
+                                <tr>
+                                    <td>davidmanhtrinh-tech</td>
+                                    <td>Wed Sep 23 10:46:03 2026 +1000</td>
+                                    <td>Update monstar.html</td>
+                                    <td>undefined</td>
+                                </tr>
+
+                                <tr>
+                                    <td>davidmanhtrinh-tech</td>
+                                    <td>Wed Sep 23 11:44:09 2026 +1000</td>
+                                    <td>Develop Monstars performance stage prototype</td>
+                                    <td>undefined</td>
+                                </tr>
+
+                                <tr>
+                                    <td>davidmanhtrinh-tech</td>
+                                    <td>Thu Sep 24 18:08:52 2026 +1000</td>
+                                    <td>Add spatial audio parameter mapping to performance stage</td>
+                                    <td>undefined</td>
+                                </tr>
+
+                                <tr>
+                                    <td>davidmanhtrinh-tech</td>
+                                    <td>Fri Sep 25 00:10:03 2026 +1000</td>
+                                    <td>Build P1B musical playground with activation zones</td>
+                                    <td>undefined</td>
+                                </tr>
+
+                                <tr>
+                                    <td>davidmanhtrinh-tech</td>
+                                    <td>Sat Sep 26 21:08:52 2026 +1000</td>
+                                    <td>Add spatial relationships between Monstars</td>
+                                    <td>undefined</td>
+                                </tr>
+
+                                <tr>
+                                    <td>davidmanhtrinh-tech</td>
+                                    <td>Mon Sep 28 12:22:25 2026 +1000</td>
+                                    <td>I added an independent timed loops for Monstars</td>
+                                    <td>undefined</td>
+                                </tr>
+
+                                <tr>
+                                    <td>davidmanhtrinh-tech</td>
+                                    <td>Mon Sep 28 13:21:17 2026 +1000</td>
+                                    <td>Added loop aligned cycles for monstars</td>
+                                    <td>undefined</td>
+                                </tr>
+
+                                <tr>
+                                    <td>davidmanhtrinh-tech</td>
+                                    <td>Mon Sep 28 14:14:37 2026 +1000</td>
+                                    <td>created a shared rhythm system for Monstars</td>
+                                    <td>undefined</td>
+                                </tr>
+
+                                <tr>
+                                    <td>davidmanhtrinh-tech</td>
+                                    <td>Mon Sep 28 22:32:12 2026 +1000</td>
+                                    <td>added in the updated SVG files of the Monstars</td>
+                                    <td>undefined</td>
+                                </tr>
+
+                                <tr>
+                                    <td>davidmanhtrinh-tech</td>
+                                    <td>Mon Sep 28 22:36:02 2026 +1000</td>
+                                    <td>Removed Figma Background</td>
+                                    <td>undefined</td>
+                                </tr>
+
+                                <tr>
+                                    <td>davidmanhtrinh-tech</td>
+                                    <td>Mon Sep 28 22:42:41 2026 +1000</td>
+                                    <td>I simply updated the the solid background colour to a gradient colour.</td>
+                                    <td>undefined</td>
+                                </tr>
+
+                                <tr>
+                                    <td>davidmanhtrinh-tech</td>
+                                    <td>Mon Sep 28 23:00:41 2026 +1000</td>
+                                    <td>Changed solid background to gradient background</td>
+                                    <td>undefined</td>
+                                </tr>
+
+                                <tr>
+                                    <td>davidmanhtrinh-tech</td>
+                                    <td>Mon Sep 28 23:01:21 2026 +1000</td>
+                                    <td>Update monstar.html</td>
+                                    <td>undefined</td>
+                                </tr>
+
+                                <tr>
+                                    <td>davidmanhtrinh-tech</td>
+                                    <td>Mon Sep 28 23:02:06 2026 +1000</td>
+                                    <td>Update monstar.html</td>
+                                    <td>undefined</td>
+                                </tr>
+
+                                <tr>
+                                    <td>davidmanhtrinh-tech</td>
+                                    <td>Mon Sep 28 23:05:57 2026 +1000</td>
+                                    <td>Update monstar.html</td>
+                                    <td>undefined</td>
+                                </tr>
+
+                                <tr>
+                                    <td>davidmanhtrinh-tech</td>
+                                    <td>Tue Sep 29 00:19:01 2026 +1000</td>
+                                    <td>index on p1a-performance-stage: 8dc3216 Update monstar.html</td>
+                                    <td>undefined</td>
+                                </tr>
+
+                                <tr>
+                                    <td>davidmanhtrinh-tech</td>
+                                    <td>Tue Sep 29 00:19:01 2026 +1000</td>
+                                    <td>On p1a-performance-stage: !!GitHub_Desktop&lt;p1a-performance-stage&gt;</td>
+                                    <td>undefined</td>
+                                </tr>
+
+                                <tr>
+                                    <td>davidmanhtrinh-tech</td>
+                                    <td>Tue Sep 29 00:20:13 2026 +1000</td>
+                                    <td>Update monstar.css</td>
+                                    <td>undefined</td>
+                                </tr>
+
+                                <tr>
+                                    <td>davidmanhtrinh-tech</td>
+                                    <td>Tue Sep 29 00:22:39 2026 +1000</td>
+                                    <td>Update monstar.css</td>
+                                    <td>undefined</td>
+                                </tr>
+
+                                <tr>
+                                    <td>davidmanhtrinh-tech</td>
+                                    <td>Tue Sep 29 00:28:23 2026 +1000</td>
+                                    <td>Solid gradient changed into a linear gradient background.</td>
+                                    <td>undefined</td>
+                                </tr>
+
+                                <tr>
+                                    <td>davidmanhtrinh-tech</td>
+                                    <td>Tue Sep 29 01:30:19 2026 +1000</td>
+                                    <td>Added six prototype folders</td>
+                                    <td>undefined</td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </details>
 
             </section>
 
-            <section>
-
-              
-    </div>
-
-
-</section>
-
         </main>
-
 
         <!-- this is an empty element which helps with spacing -->
         <aside></aside>
@@ -99,7 +362,7 @@ A significant takeaway from these two areas was understanding the value of paral
 
         <p>
 <!-- !!!!! -->
-<!--    change this to your preferred online name and update link to refer to your github page  -->\
+<!--    change this to your preferred online name and update link to refer to your github page  -->
        Page maintained by:
             <a href="https://github.com/davidmanhtrinh-tech" target="_blank">
             David Trinh 
@@ -107,5 +370,6 @@ A significant takeaway from these two areas was understanding the value of paral
         </p>
 
     </footer>
+
 </body>
 </html>
